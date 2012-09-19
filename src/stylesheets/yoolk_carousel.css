@@ -1,0 +1,109 @@
+.yoolk-carousel {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper {
+    background-color: #fff;
+    border: 8px solid #fff;
+    height: 328px;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.yoolk-carousel ul {
+    width: 9999px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 147px;
+}
+
+.infinite-carousel ul li {
+    display: block;
+    float: left;
+    padding: 0px 7px;
+    height: 312px;
+}
+
+a img {
+    display:block;
+}
+
+.arrow {
+    display: block;
+    height: 44px;
+    width: 24px;
+    text-indent: -999px;
+    position: absolute;
+    top: 145px;
+    cursor: pointer;
+}
+
+.forward {
+@include carousel-sprite(gray-arrow-right);
+    right: 0;
+}
+
+.back {
+@include carousel-sprite(gray-arrow-left);
+    left: 0;
+}
+
+.back-navigator:hover {
+    cursor: pointer;
+}
+
+.back {
+    background-image: url(../images/black-arrow-left.png);
+/*@include carousel-sprite(black-arrow-left);*/
+}
+
+.cover {
+    opacity: 0.3;
+    /*@include opacity(0.3);*/
+}
+
+    }
+
+.forward-navigator:hover {
+    cursor: pointer;
+}
+
+.forward {
+    background-image: url(../images/black-arrow-right.png);
+/*@include carousel-sprite(black-arrow-right);*/
+}
+
+.cover {
+    opacity: 0.3;
+/*@include opacity(0.3);*/
+}
+
+
+.cover {
+/*@include opacity(0.7);*/
+    opacity: 0.3;
+    background: #000;
+    display: block;
+    height: 312px;
+    position: absolute;
+    top: 8px;
+    width: 140px;
+}
+
+.cover-left {
+    left: 8px;
+    /*left: $gridGutterWidth;*/
+}
+
+.cover-right {
+    right: 8px;
+    /*right: $gridGutterWidth;*/
+}

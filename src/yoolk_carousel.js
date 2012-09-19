@@ -62,5 +62,6 @@ $.fn.yoolkCarousel = function (data, option) {
         _renderItems(ul, data, index);
 
         $(this).append(ul);
+        $(this).addClass("yoolk-carousel");
     });
 };
