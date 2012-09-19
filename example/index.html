@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+      <meta charset='utf-8'>
+    <link href="css/yoolk-carousel.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../lib/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="../src/yoolk_carousel.js" type="text/javascript"></script>
+
+    <script>
+      window.onload = function () {
+        var data = [
+          {
+            url: "images/billboard01.jpg",
+            action: ""
+          },
+          {
+            url: "images/billboard02.swf",
+            action: ""
+          },
+          {
+            url: "images/billboard03.swf",
+            action: ""
+          }
+        ];
+
+        var option = {
+            width: 658,
+            height: 312
+        };
+
+        $("#yoolk-carousel").yoolkCarousel(data, option);
+      }
+    </script>
+  </head>
+  <body>
+    <h3>
+      Yoolk Carousel
+    </h3>
+
+    <div id="yoolk-carousel"></div>
+  </body>
+</html>
