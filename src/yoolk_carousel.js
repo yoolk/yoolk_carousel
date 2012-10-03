@@ -55,13 +55,41 @@ $.fn.yoolkCarousel = function (data, option) {
             ul.append(nextItem);
         };
 
+        var _renderBackButton = function () {
+          var link = $("<a></a>").addClass("back-navigator"),
+              cover = $("<span></span>").addClass("cover cover-left"),
+              arrow = $("<span></span>").addClass("arrow back").html("<");
+
+          link.append(cover);
+          link.append(arrow);
+
+          return link;
+        };
+
+        var _renderForwardButton = function () {
+            var link = $("<a></a>").addClass("forward-navigator"),
+                cover = $("<span></span>").addClass("cover cover-right"),
+                arrow = $("<span></span>").addClass("arrow forward").html("<");
+
+            link.append(cover);
+            link.append(arrow);
+
+            return link;
+        };
+
         var wrapper = $("<div>").addClass("wrapper"),
             ul = $("<ul>"),
             index = 0;
 
         _renderItems(ul, data, index);
 
-        $(this).append(ul);
+        var backButton = _renderBackButton(),
+            forwardButton = _renderForwardButton();
+
+        wrapper.append(ul);
+        $(this).append(wrapper);
         $(this).addClass("yoolk-carousel");
+        $(this).append(backButton);
+        $(this).append(forwardButton);
     });
 };

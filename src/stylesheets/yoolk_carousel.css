@@ -1,42 +1,47 @@
 .yoolk-carousel {
-    width: 100%;
+    width: 994px;
     position: relative;
+    background-color: white;
+    height: 340px;
+    margin: 70px 0;
+    overflow: hidden;
 }
 
-.wrapper {
-    background-color: #fff;
-    border: 8px solid #fff;
+.yoolk-carousel .wrapper {
+    background-color: white;
+    border: 14px solid white;
     height: 328px;
-    overflow: auto;
+    left: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
-    left: 0;
+    width: 966px;
 }
 
 .yoolk-carousel ul {
-    width: 9999px;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
+    left: -525px;
+    list-style: none outside none;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 0;
-    left: 147px;
+    width: 9999px;
 }
 
-.infinite-carousel ul li {
+.yoolk-carousel ul li {
     display: block;
     float: left;
-    padding: 0px 7px;
     height: 312px;
+    padding: 0 7px;
+    width: 658px;
 }
 
-a img {
+.yoolk-carousel a img {
     display:block;
+    border: none;
 }
 
-.arrow {
+.yoolk-carousel .arrow {
     display: block;
     height: 44px;
     width: 24px;
@@ -46,64 +51,58 @@ a img {
     cursor: pointer;
 }
 
-.forward {
-@include carousel-sprite(gray-arrow-right);
+.yoolk-carousel .forward {
+/*@include carousel-sprite(gray-arrow-right);*/
     right: 0;
 }
 
-.back {
-@include carousel-sprite(gray-arrow-left);
-    left: 0;
-}
-
-.back-navigator:hover {
+.yoolk-carousel .back-navigator:hover {
     cursor: pointer;
 }
 
-.back {
-    background-image: url(../images/black-arrow-left.png);
-/*@include carousel-sprite(black-arrow-left);*/
+.yoolk-carousel .back {
+    background-image: url(../images/black_arrow.png);
+    background-position: 0 -108px;
+    left: 0;
 }
 
-.cover {
+.yoolk-carousel .cover {
     opacity: 0.3;
     /*@include opacity(0.3);*/
 }
 
-    }
-
-.forward-navigator:hover {
+.yoolk-carousel .forward-navigator:hover {
     cursor: pointer;
 }
 
-.forward {
-    background-image: url(../images/black-arrow-right.png);
+.yoolk-carousel .forward {
+    background-image: url(../images/black_arrow.png);
 /*@include carousel-sprite(black-arrow-right);*/
 }
 
-.cover {
+.yoolk-carousel .cover {
     opacity: 0.3;
 /*@include opacity(0.3);*/
 }
 
 
-.cover {
+.yoolk-carousel .cover {
 /*@include opacity(0.7);*/
-    opacity: 0.3;
+    opacity: 0.7;
     background: #000;
     display: block;
     height: 312px;
     position: absolute;
-    top: 8px;
+    top: 14px;
     width: 140px;
 }
 
-.cover-left {
-    left: 8px;
+.yoolk-carousel .cover-left {
+    left: 14px;
     /*left: $gridGutterWidth;*/
 }
 
-.cover-right {
-    right: 8px;
+.yoolk-carousel .cover-right {
+    right: 14px;
     /*right: $gridGutterWidth;*/
 }
